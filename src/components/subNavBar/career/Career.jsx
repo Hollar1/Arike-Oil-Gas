@@ -3,7 +3,10 @@ import Button from "../../button/Button";
 import styles from "../career/career.module.scss";
 import SubNavBar from "../SubNavBar";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import { faXmark } from "@fortawesome/free-solid-svg-icons/faXmark";
 function Career() {
+  const [showUploadFile, setShowUploadFile] = useState(false);
   return (
     <div className={styles.parent_wrapper}>
       <header>
@@ -31,27 +34,18 @@ function Career() {
                 3+ years of experience in sales, strong communication skills,
                 ability to meet target.
                 <aside>
-                  <FontAwesomeIcon icon={faLocationDot} />
-                  <>Ibadan</>
+                  <div>
+                    <FontAwesomeIcon icon={faLocationDot} /> Ibadan
+                  </div>
+                  <button
+                    onClick={() => {
+                      setShowUploadFile(true);
+                    }}
+                  >
+                    Apply
+                  </button>
                 </aside>
               </p>
-              <button>Apply</button>
-            </div>
-          </article>
-
-          <article>
-            <b>Logistics Coordinator</b>
-
-            <div>
-              <p>
-                3+ years of experience in sales, strong communication skills,
-                ability to meet target.
-                <aside>
-                  <FontAwesomeIcon icon={faLocationDot} />
-                  <>Ibadan</>
-                </aside>
-              </p>
-              <button>Apply</button>
             </div>
           </article>
 
@@ -63,15 +57,59 @@ function Career() {
                 3+ years of experience in sales, strong communication skills,
                 ability to meet target.
                 <aside>
-                  <FontAwesomeIcon icon={faLocationDot} />
-                  <>Ibadan</>
+                  <div>
+                    <FontAwesomeIcon icon={faLocationDot} /> Ibadan
+                  </div>
+                  <button
+                    onClick={() => {
+                      setShowUploadFile(true);
+                    }}
+                  >
+                    Apply
+                  </button>
                 </aside>
               </p>
-              <button>Apply</button>
             </div>
           </article>
+
+          <article>
+            <b>Logistics Coordinator</b>
+
+            <div>
+              <p>
+                3+ years of experience in sales, strong communication skills,
+                ability to meet target.
+                <aside>
+                  <div>
+                    <FontAwesomeIcon icon={faLocationDot} /> Ibadan
+                  </div>
+                  <button
+                    onClick={() => {
+                      setShowUploadFile(true);
+                    }}
+                  >
+                    Apply
+                  </button>
+                </aside>
+              </p>
+            </div>
+          </article>
+
           <span>No More Jobs</span>
         </section>
+
+        {showUploadFile && (
+          <section className={styles.sec_03}>
+            <div>
+              <h3>Upload Your CV</h3>
+              <input type="file" />
+              <Button children={"Submit CV"} />
+              <span onClick={()=>{setShowUploadFile(false)}}>
+                <FontAwesomeIcon icon={faXmark} color="red" />
+              </span>
+            </div>
+          </section>
+        )}
       </div>
     </div>
   );
