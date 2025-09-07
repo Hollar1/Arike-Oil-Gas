@@ -31,13 +31,24 @@ function Footer() {
         >
           Cylinder Exchange
         </p>
+
         <p>
           <a className={styles.href} href="#sec_06">
             Delivery Areas
           </a>
         </p>
+        <p
+          onClick={() => {
+            navigate("/career");
+          }}
+        >
+          Job Vacancy
+        </p>
+
         <p>
-          <a className={styles.href} href="#sec_07">FAQs</a>
+          <a className={styles.href} href="#sec_07">
+            FAQs
+          </a>
         </p>
 
         <h3>Legal</h3>

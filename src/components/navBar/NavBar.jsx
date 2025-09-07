@@ -44,10 +44,10 @@ function NavBar() {
           </button>
           <button
             onClick={() => {
-              navigate("/login");
+              navigate("/career");
             }}
           >
-            Login
+            Job Vacancy
           </button>
           {/* <button>Contact Us</button>
           <button>Contact Us</button> */}

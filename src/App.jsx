@@ -13,6 +13,7 @@ import BottomBar from "./components/bottomBar/BottomBar";
 import Order from "./pages/order/Order";
 import ScrollToTop from "./utils/scrollToTop";
 import AboutUs from "./pages/aboutUs/AboutUs";
+import Career from "./components/subNavBar/career/Career";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/cylinder" element={<Cylinder />} />
         <Route path="/order" element={<Order />} />
         <Route path="/about-us" element={<AboutUs/>} />
+        <Route path="/career" element={<Career/>} />
         <Route path="/pay-deposit" element={<Pay_deposit />} />
       </Routes>
       <BottomBar />
