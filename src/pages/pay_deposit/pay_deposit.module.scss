@@ -1,0 +1,143 @@
+@import "../../../public/styles_props.scss";
+
+.parent_wrapper {
+  height: 100%;
+  min-height: 100vh;
+  background-color: map-get($colors, color_00);
+  .wrapper {
+    padding: 15px;
+    .sec_01 {
+      margin-top: 20px;
+      h3 {
+        @include sub_header;
+      }
+      article {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 10px;
+        padding: 10px;
+        gap: 15px;
+        img {
+          width: 100px;
+          height: 120px;
+          border-radius: 10px;
+          background-color: map-get($colors, color_00);
+        }
+        p {
+          @include _text;
+          font-size: map-get($font_size, xl);
+          font-weight: map-get($font_weight, s);
+        }
+        span {
+          @include _text;
+          font-size: map-get($font_size, xl);
+          color: map-get($colors, color_08);
+        }
+      }
+    } // sec_01 scope ends here
+    .sec_02 {
+      margin-top: 20px;
+      h3 {
+        @include sub_header;
+      }
+      article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 10px;
+        padding: 15px;
+        gap: 15px;
+        div {
+          display: flex;
+          justify-content: space-between;
+          font-family: inter;
+          p {
+            font-size: map-get($font_size, xl);
+            color: map-get($colors, color_08);
+          }
+          span {
+            font-size: map-get($font_size, xl);
+            // font-weight: 400;
+          }
+        }
+        nav {
+          border-bottom: dashed 0.1px map-get($colors, color_06);
+        }
+        strong {
+          margin-top: 10px;
+          display: flex;
+          justify-content: space-between;
+          font-family: inter;
+          font-size: map-get($font_size, xl);
+          font-weight: map-get($font_weight, xxl);
+          letter-spacing: 0.3px;
+        }
+      }
+    } // sec_02 scope ends here
+
+    .sec_03 {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(231, 231, 242);
+      border: solid 1.5px map-get($colors, color_02);
+      padding: 8px 15px;
+      align-items: center;
+      border-radius: 8px;
+      article {
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          font-family: roboto;
+          h3 {
+            font-weight: map-get($font_weight, s);
+          }
+          strong {
+            font-size: map-get($font_size, xl);
+            font-weight: map-get($font_weight, xxl);
+            letter-spacing: 0.3px;
+            font-family: inter;
+          }
+        }
+      }
+      img {
+        width: 35px;
+      }
+    } // sec_03 scope ends here
+
+    // .sec_04 {
+    //   display: flex;
+    //   flex-direction: column;
+    //   gap: 3px;
+    //   margin-top: 15px;
+    //   h3 {
+    //     @include sub_header;
+    //   }
+    //   label {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     background-color: white;
+    //     padding: 15px;
+    //     margin-top: 10px;
+    //     border-radius: 5px;
+    //     @include _text;
+    //     input {
+    //       transform: scale(1.5);
+    //     }
+    //   }
+    // }
+
+    .sec_05 {
+      margin-top: 25px;
+      button {
+        height: 45px;
+        font-size: map-get($font_size, xl);
+      }
+    }
+  } // Wrapper scope ends here
+} // Parent_wrapper scope ends her

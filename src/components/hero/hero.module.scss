@@ -1,0 +1,76 @@
+@import "../../../public/styles_props.scss";
+.parent_wrapper {
+  .wrapper {
+    margin-top: 70px;
+    .section_A {
+      background-image: url("../../assets/images/hero_photo_02.png");
+      background-position: center;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+      font-family: poppins;
+      padding: 20px 10px;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+          &:first-child {
+            color: blue;
+          }
+        }
+        p {
+          text-align: center;
+          font-size: map-get($font_size, xl);
+          font-weight: map-get($font_weight, s);
+        }
+      }
+      aside {
+        display: flex;
+        margin-top: 20px;
+        width: 50%;
+        max-width: 160px;
+      }
+    }
+
+    .section_B {
+      background-image: url("../../assets/images/hero_photo_03.png");
+      background-position: center;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+      font-family: poppins;
+      padding: 20px 10px;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+          &:first-child {
+            color: blue;
+          }
+        }
+
+        p {
+          text-align: center;
+          font-size: map-get($font_size, xl);
+          font-weight: map-get($font_weight, s);
+        }
+      }
+      aside {
+        display: flex;
+        margin-top: 20px;
+        width: 50%;
+        max-width: 160px;
+      }
+    }
+  } // Wrapper sco[pe ends here
+} //Parent wrapper scope ends here

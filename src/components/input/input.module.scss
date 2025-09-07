@@ -1,0 +1,29 @@
+@import "../../../public/styles_props.scss";
+
+.wrapper {
+  width: 100%;
+  label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @include _text;
+    input {
+      margin-top: 2px;
+      height: 45px;
+      border-radius: 7px;
+      border: solid 1.5px map-get($colors, color_07);
+      padding-inline-start: 10px;
+      color: black;
+      outline: none;
+      font-size: map-get($font_size, xl);
+      caret-color: map-get($colors, button_color);
+      &:focus {
+        border: solid 1.5px map-get($colors, button_color);
+      }
+      &::placeholder {
+        font-size: map-get($font_size, m);
+        color: gray;
+      }
+    }
+  }
+}

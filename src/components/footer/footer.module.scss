@@ -1,0 +1,73 @@
+@import "../../../public/styles_props.scss";
+.wrapper {
+  footer {
+    margin-bottom: 50px;
+    background-color: map-get($colors, color_08);
+    padding: 15px;
+
+    h3 {
+      color: white;
+      @include header;
+      text-align: start;
+      margin-top: 25px;
+      margin-bottom: -4px;
+    }
+    p {
+      color: map-get($colors, color_04);
+      @include _text;
+      margin: 7px;
+      line-height: 23px;
+      .href {
+        color: map-get($colors, color_04);
+        text-decoration: none;
+      }
+    }
+
+    div {
+      display: flex;
+      height: 40px;
+      width: 100%;
+      gap: 0%;
+      border-radius: 5px;
+      background-color: map-get($colors, color_04);
+      margin-bottom: 30px;
+      input {
+        border: none;
+        width: 80%;
+        background-color: transparent;
+        outline: none;
+        padding-inline-start: 10px;
+        color: black;
+        font-size: map-get($font_size, xl);
+        font-weight: map-get($font_weight, m);
+        &::placeholder {
+          font-size: map-get($font_size, l);
+        }
+      }
+      button {
+        border: none;
+        background-color: map-get($colors, color_01);
+        color: white;
+        width: 25%;
+        font-weight: map-get($font_weight, l);
+        font-size: map-get($font_size, xl);
+        letter-spacing: 0.3px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+    hr {
+      border: solid 0.1px map-get($colors, color_05);
+      margin-bottom: 35px;
+    }
+    i {
+      color: map-get($colors, color_04);
+      text-align: center;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+  }
+}

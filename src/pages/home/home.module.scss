@@ -1,0 +1,256 @@
+@import "../../../public/styles_props.scss";
+.parent_wrapper {
+  .wrapper {
+    padding-bottom: 80px;
+    .sec_00 {
+      padding: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 40px;
+      @include _text;
+      line-height: 30px;
+      background-color: map-get($colors, color_00);
+      h3 {
+        @include header;
+        text-align: start;
+        margin-bottom: 5px;
+      }
+      strong {
+        color: map-get($colors, color_08);
+        letter-spacing: 0.3px;
+      }
+    }
+    .sec_01 {
+      background-color: map-get($colors, color_00);
+      width: 100%;
+      padding: 35px 10px;
+      h3 {
+        @include header;
+      }
+
+      article {
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        gap: 15px;
+
+        > div {
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3),
+            0px 0px 10px rgba(0, 0, 0, 0.3);
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          padding: 5px 15px;
+          img {
+            width: 120px;
+            height: 180px;
+            border-radius: 15px;
+          }
+          b {
+            font-family: roboto;
+            font-size: map-get($font_size, xl);
+          }
+          p {
+            color: green;
+            font-family: inter;
+            font-size: map-get($font_size, l);
+            font-weight: map-get($font_weight, l);
+          }
+        }
+      }
+      .sec_02 {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        button {
+          @include _button;
+        }
+      }
+    }
+
+    .sec_03 {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 35px;
+      h3 {
+        @include header;
+        margin-bottom: 15px;
+      }
+      article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+        margin-bottom: 25px;
+        div {
+          background-color: map-get($colors, color_05);
+          border-radius: 30px;
+          height: 60px;
+          width: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        b {
+          @include sub_header;
+        }
+        p {
+          @include _text;
+        }
+      }
+    }
+    .sec_04 {
+      margin-top: 35px;
+      padding: 35px 10px;
+      padding-top: 35px;
+      background-color: map-get($colors, color_00);
+
+      h3 {
+        @include header;
+        margin-bottom: 15px;
+      }
+      article {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+        div {
+          b {
+            @include sub_header;
+          }
+          p {
+            @include _text;
+          }
+        }
+      }
+    }
+    .sec_05 {
+      padding: 15px;
+      margin-top: 35px;
+      h3 {
+        @include header;
+      }
+      article {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: map-get($colors, color_00);
+        border-radius: 15px;
+        padding: 20px;
+        gap: 10px;
+        position: relative;
+        height: 260px;
+        img {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+        }
+        b {
+          @include sub_header;
+        }
+
+        q {
+          @include _text;
+        }
+        button {
+          position: absolute;
+          border: none;
+          background-color: transparent;
+          outline: none;
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+        .next_ {
+          right: -2%;
+        }
+        .prev_ {
+          left: -2%;
+        }
+      }
+    }
+    .sec_06 {
+      background-color: map-get($colors, color_00);
+      padding: 35px 15px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 35px;
+      scroll-behavior: smooth;
+      scroll-margin-top: 80px;
+      h3 {
+        @include header;
+      }
+      p {
+        @include _text;
+        margin: 10px;
+      }
+      img {
+        width: 100%;
+        margin-top: 5px;
+        border-radius: 5px;
+      }
+    }
+    .sec_07 {
+      margin-top: 35px;
+      scroll-behavior: smooth;
+      scroll-margin-top: 80px;
+      h3 {
+        @include header;
+      }
+      article {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        padding: 15px;
+        div {
+          width: 100%;
+          padding: 15px;
+          border-radius: 7px;
+          background-color: map-get($colors, color_00);
+
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
+          h5 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            @include sub_header;
+            font-weight: map-get($font_weight, m);
+            font-size: map-get($font_size, l);
+            align-items: center;
+            color: black;
+          }
+          p {
+            margin-top: 10px;
+            @include _text;
+          }
+        }
+      }
+    }
+  } // Wrapper scope ends here
+} // Parent_wrapper scope ends here

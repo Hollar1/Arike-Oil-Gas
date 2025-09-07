@@ -1,0 +1,66 @@
+@import "../../../public/styles_props.scss";
+
+.parent_wrapper {
+  nav {
+    width: 100%;
+    height: 70px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 1000;
+    background-color: map-get($colors, color_04);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    padding: 0px 15px;
+    border-bottom: 1px solid map-get($colors, color_07);
+    div {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 120px;
+        height: 60px;
+      }
+
+      &:last-child {
+        gap: 35px;
+        span {
+          img {
+            width: 40px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  } // Nav scope ends here
+  .sec_01 {
+    border: solid 2px map-get($colors, color_08);
+    margin-top: 69px;
+    position: fixed;
+    z-index: 500;
+    top: 0%;
+    right: 0%;
+    width: 40%;
+    max-width: 150px;
+    border-top: 0px;
+    button {
+      width: 100%;
+      padding: 7px 0px;
+      border-left: 0px;
+      border-right: 0px;
+      border-bottom: 0px;
+      border-top: solid 0.1px;
+      font-family: inter;
+      letter-spacing: 0.3px;
+      font-size: 15px;
+      font-weight: map-get($font_weight, sl);
+      color: black;
+      &:active {
+        background-color: map-get($colors, $key: background_color);
+      }
+    }
+  }
+} // Parent_wrapper scope ends here

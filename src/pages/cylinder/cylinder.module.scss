@@ -1,0 +1,87 @@
+@import "../../../public/styles_props.scss";
+
+.parent_wrapper {
+  // background-color: map-get($colors, color_00);
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+  }
+  height: 100%;
+  min-height: 100vh;
+  background-color: map-get($colors, background_color);
+  .wrapper {
+    margin-top: 50px;
+    padding: 15px;
+    .sec_01 {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      article {
+        background-color: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2),
+          0px 0px 15px rgba(0, 0, 0, 0.2);
+        h3 {
+          @include sub_header;
+          margin-bottom: 5px;
+        }
+        p {
+          @include _text;
+          margin-top: 10px;
+        }
+        button {
+          margin-top: 10px;
+          height: 40px;
+        }
+      }
+    }
+    .sec_02 {
+      margin-top: 15px;
+      table,
+      tr {
+        width: 100%;
+        border-collapse: collapse;
+        border: solid 0.5px map-get($colors, color_08);
+        text-align: center;
+        th,
+        thead {
+          background-color: rgb(225, 239, 245);
+          @include sub_header;
+          font-size: map-get($font_size, l);
+          padding: 5px;
+          border: solid 0.5px map-get($colors, color_08);
+        }
+        td {
+          border: solid 0.5px map-get($colors, color_08);
+          padding: 5px;
+          font-family: inter;
+          font-weight: map-get($font_weight, s);
+          color: map-get($colors, color_08);
+          font-size: map-get($font_size, l);
+          button {
+            width: 100%;
+            padding: 0px;
+            background-color: map-get($colors, button_color);
+            border: none;
+            height: 20px;
+            color: white;
+            font-size: map-get($font_size, s);
+          }
+        }
+      }
+    }
+    .sec_03 {
+      margin-top: map-get($font_size, l);
+      margin-bottom: 60px;
+      padding: 5px;
+      font-size: map-get($font_size, m);
+      font-family: inter;
+      font-style: italic;
+      background-color: map-get($colors, color_00);
+    }
+  } // Wrapper scope ends here
+} // Parent_wrapper scope ends here

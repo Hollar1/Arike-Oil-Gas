@@ -1,0 +1,64 @@
+$colors: (
+  color_00: #f3f8fa,
+  color_01: #137fec,
+  color_02: #034b93,
+  color_03: #034b93,
+  color_04: #f7f3f3,
+  color_05: #d5d2d2,
+  color_06: #9a9797,
+  color_07: #808080,
+  color_08: #454444,
+  color_09: #1f2937,
+  color_10: #cbe9f6,
+);
+
+$font_size: (
+  s: 12px,
+  m: 14px,
+  l: 16px,
+  xl: 18px,
+  xxl: 20px,
+  xxxl: 23px,
+);
+
+$font_weight: (
+  s: 450,
+  m: 500,
+  l: 550,
+  xl: 600,
+  xxl: 650,
+  xxxl: 700,
+);
+
+@mixin header {
+  font-family: poppins;
+  font-size: map-get($font_size, xxxl);
+  font-weight: map-get($font_weight, xxxl);
+  text-align: center;
+}
+
+@mixin sub_header {
+  font-family: roboto;
+  font-size: map-get($font_size, xl);
+  font-weight: map-get($font_weight, l);
+}
+
+@mixin _text {
+  font-size: map-get($font_size, l);
+  font-family: inter;
+  line-height: 25px;
+}
+
+@mixin _button {
+  width: 85%;
+  height: 35px;
+  font-weight: map-get($font_weight, m);
+  border: solid map-get($colors, color_06);
+  font-size: map-get($font_size, xl);
+  letter-spacing: 0.3px;
+  border-radius: 3px;
+  &:active {
+    border: solid 1.5px map-get($colors, color_01);
+    background-color: map-get($colors, color_05);
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../../public/styles_props.scss";
+.parent_wrapper {
+  nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: map-get($colors, color_04);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid map-get($colors, color_07);
+    h3 {
+      @include sub_header;
+    }
+  }
+}

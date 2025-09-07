@@ -1,0 +1,82 @@
+@import "../../../public/styles_props.scss";
+.parent_wrapper {
+  .wrapper {
+    padding: 15px 25px;
+    h3 {
+      @include sub_header;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .sec_01 {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 45px;
+      }
+      b {
+        @include sub_header;
+        margin-top: 5px;
+      }
+      p {
+        @include _text;
+        color: gray;
+      }
+      div {
+        background-color: map-get($colors, color_01);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        position: absolute;
+        right: 37.5%;
+      }
+    }
+    .sec_02 {
+      h3 {
+        text-align: start;
+      }
+      article {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        padding-bottom: 5px;
+        border-bottom: solid 0.5px map-get($colors, color_04);
+        div {
+          &:first-child {
+            width: 30px;
+            height: 30px;
+            font-size: map-get($font_size, m);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: map-get($colors, color_10);
+          }
+          &:nth-child(2) {
+            flex: 1;
+            p {
+              font-size: map-get($font_size, l);
+              font-family: roboto;
+              font-weight: map-get($font_weight, l);
+            }
+            span {
+              @include _text;
+              font-size:map-get($font_size,m );
+              color:map-get($colors,color_08 );
+            }
+          }
+        }
+      }
+    }
+  } // Wrapper scope ends here
+} //Parent_wrapper scope ends here

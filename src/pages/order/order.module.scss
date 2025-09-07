@@ -1,0 +1,84 @@
+@import "../../../public/styles_props.scss";
+
+.parent_wrapper {
+  .wrapper {
+    background-color: map-get($colors, color_00);
+    height: 100%;
+    min-height: 100vh;
+    .sec_00 {
+      width: 100%;
+      top: 70px;
+      height: 35px;
+      position: fixed;
+      display: flex;
+
+      div {
+        display: flex;
+        align-items: center;
+        width: 35%;
+        justify-content: center;
+        border: solid 1.5px map-get($colors, color_06);
+        background-color: map-get($colors, color_04);
+        select {
+          width: 100%;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          font-size: map-get($font_size, l);
+          text-align: center;
+          font-weight: map-get($font_weight, l);
+        }
+      }
+    }
+
+    .sec_01 {
+      width: 100%;
+      padding: 25px 10px;
+      article {
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        gap: 15px;
+
+        > div {
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3),
+            0px 0px 10px rgba(0, 0, 0, 0.3);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          padding: 5px 15px;
+          img {
+            width: 120px;
+            height: 160px;
+            border-radius: 15px;
+          }
+          b {
+            font-family: roboto;
+            font-size: map-get($font_size, xl);
+          }
+          p {
+            color: green;
+            font-family: inter;
+            font-size: map-get($colors, l);
+            font-weight: map-get($font_weight, l);
+          }
+        }
+      }
+      .sec_02 {
+        margin-top: 25px;
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        button {
+          @include _button;
+        }
+      }
+    }
+  }
+}

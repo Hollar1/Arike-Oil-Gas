@@ -1,0 +1,99 @@
+@import "../../../public/styles_props.scss";
+
+.parent_wrapper {
+  .wrapper {
+    padding: 5px 20px;
+    header {
+      h3 {
+        @include header;
+        margin-top: 5px;
+      }
+      p {
+        @include _text;
+        color: map-get($colors, color_08);
+        text-align: center;
+      }
+    }
+    .sec_01 {
+      display: flex;
+      margin-top: 15px;
+      flex-direction: column;
+      gap: 8px;
+      input {
+        height: 40px;
+        border-radius: 5px;
+        border: solid 1.5px map-get($colors, color_08);
+        padding-inline-start: 7px;
+        outline: none;
+        font-size: map-get($font_size, l);
+        background-color: map-get($colors, background_color);
+        &:focus {
+          border: solid 1.5px map-get($colors, button_color);
+        }
+        &::placeholder {
+          font-size: map-get($font_size, m);
+        }
+      }
+      textarea {
+        height: 115px;
+        border-radius: 5px;
+        border: solid 1.5px map-get($colors, color_08);
+        padding: 5px;
+        outline: none;
+        font-size: map-get($font_size, l);
+        background-color: map-get($colors, background_color);
+        &::placeholder {
+          font-size: map-get($font_size, m);
+        }
+        &:focus {
+          border: solid 1.5px map-get($colors, color_01);
+        }
+      }
+      button {
+        height: 35px;
+      }
+    }
+    .sec_02 {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      header {
+        margin-top: -5px;
+        margin-bottom: -10px;
+        h3 {
+          @include sub_header;
+          text-align: start;
+        }
+      }
+      article {
+        background-color: map-get($colors, color_00);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
+        @include _text;
+        font-size: map-get($font_size, l);
+        margin-top: -5px;
+
+        div {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          img {
+            width: 30px;
+            background-color: map-get($colors, color_10);
+            border-radius: 50%;
+            padding: 5px;
+          }
+        }
+        .href {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  } // Wrapper scope ends here
+} //Parent wrapper scope ends here

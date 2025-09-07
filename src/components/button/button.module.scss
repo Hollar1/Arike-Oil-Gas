@@ -1,0 +1,28 @@
+@import "../../../public/styles_props.scss";
+
+.parent_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      width: 100%;
+      height: 30px;
+      border-radius: 8px;
+      border: solid 1.5px;
+      font-family: roboto;
+      font-weight: map-get($font_weight, xl);
+      font-size: map-get($font_size, l);
+      background-color:map-get($colors, color_01 );
+      color: white;
+      &:active {
+           background-color:map-get($colors, color_02 );
+      }
+    } // Button scope ends here
+  }
+} // Parent_wrapper scope ends here
