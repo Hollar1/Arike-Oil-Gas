@@ -1,0 +1,149 @@
+@import "../../../public/styles_props.scss";
+.parent_wrapper {
+  background-color: map-get($colors, color_00);
+  height: 100%;
+  min-height: 100vh;
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+  }
+  .wrapper {
+    margin-top: 50px;
+    padding: 10px;
+    .sec_01 {
+      padding-top: 15px;
+      h3 {
+        @include header;
+      }
+      p {
+        @include _text;
+      }
+    }
+    .sec_02 {
+      margin-top: 25px;
+      margin-bottom: 80px;
+      h3 {
+        @include header;
+        text-align: left;
+      }
+      article {
+        margin-top: 8px;
+        margin-bottom: 20px;
+        background-color: white;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3),
+          0px 0px 3px rgba(0, 0, 0, 0.3);
+        b {
+          @include sub_header;
+        }
+        div {
+          display: flex;
+          gap: 10px;
+          p {
+            @include _text;
+            color: map-get($colors, color_08);
+
+            aside {
+              font-style: italic;
+              color: map-get($colors, color_03);
+              margin-top: 3px;
+              font-weight: map-get($font_weight, m);
+              display: flex;
+              width: 100%;
+              justify-content: space-between;
+              align-items: center;
+              div {
+                display: flex;
+                align-items: center;
+                gap: 0px;
+              }
+              button {
+                width: 100px;
+                height: 30px;
+                padding: 0px 15px;
+                background-color: map-get($colors, color_01);
+                border: none;
+                border-radius: 8px;
+                color: white;
+                font-size: map-get($font_size, l);
+                &:active {
+                  background-color: map-get($colors, color_02);
+                }
+              }
+            }
+          }
+        }
+      }
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: inter;
+        font-weight: map-get($font_weight, l);
+        color: map-get($colors, color_06);
+      }
+    }
+
+    .sec_03 {
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      z-index: 100;
+      top: 0%;
+      left: 0%;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        width: 85%;
+        background-color: white;
+        padding: 15px;
+        position: relative;
+        h3 {
+          color: black;
+          @include sub_header;
+          text-align: center;
+        }
+        input {
+          color: black;
+          font-size: map-get($font_size, xl);
+          width: 90%;
+          margin: auto;
+        }
+        button {
+          margin-top: -25px;
+          margin-bottom: -15px;
+        }
+        span {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 3px;
+          border-radius: 50%;
+          top: 5px;
+          right: 5px;
+          height: 30px;
+          width: 30px;
+          font-size: map-get($font_size, xxl);
+          background-color: map-get($colors, color_05);
+        }
+      }
+    }
+  } // Wrapper scope ends here
+} // Parent_wrapper scope ends here

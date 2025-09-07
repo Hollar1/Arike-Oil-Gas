@@ -10,9 +10,10 @@ function Hero() {
   useEffect(() => {
     const timeOut = setTimeout(() => {
       setChangeBackground(!changeBackground);
-      return () => clearTimeout(timeOut);
     }, 5000);
+    return () => clearTimeout(timeOut);
   }, [changeBackground]);
+
   return (
     <div className={styles.parent_wrapper}>
       <div className={styles.wrapper}>

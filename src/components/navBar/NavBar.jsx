@@ -2,8 +2,8 @@ import styles from "../navBar/navBar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
 import logo from "../../assets/images/Logo_02.png";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 function NavBar() {
   const navigate = useNavigate();
@@ -11,6 +11,9 @@ function NavBar() {
   const handleOpenBars = () => {
     setOpenBars(!openBars);
   };
+
+
+
   return (
     <div className={styles.parent_wrapper}>
       <nav>

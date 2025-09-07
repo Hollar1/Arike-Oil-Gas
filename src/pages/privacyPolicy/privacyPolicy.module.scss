@@ -1,0 +1,40 @@
+@import "../../../public/styles_props.scss";
+
+.parent_wrapper {
+  background-color: map-get($colors, color_00);
+  height: 100%;
+  min-height: 100vh;
+  padding-bottom: 55px;
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+  }
+  .wrapper {
+    margin-top: 50px;
+    padding: 10px;
+    height: 100%;
+    min-height: 100vh;
+
+    > h3 {
+      @include header;
+      text-align: left;
+      margin-top: 25px;
+    }
+    > p {
+      @include _text;
+      color: map-get($colors, color_07);
+    }
+    .sec_01 {
+      margin-top: 25px;
+      h3 {
+        @include sub_header;
+      }
+      p {
+        @include _text;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

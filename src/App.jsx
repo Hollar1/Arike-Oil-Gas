@@ -13,7 +13,9 @@ import BottomBar from "./components/bottomBar/BottomBar";
 import Order from "./pages/order/Order";
 import ScrollToTop from "./utils/scrollToTop";
 import AboutUs from "./pages/aboutUs/AboutUs";
-import Career from "./components/subNavBar/career/Career";
+import Career from "./pages/career/Career";
+import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy";
+import RefundPolicy from "./pages/refundPolicy/RefundPolicy";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route path="/order" element={<Order />} />
         <Route path="/about-us" element={<AboutUs/>} />
         <Route path="/career" element={<Career/>} />
+        <Route path="/refund-policy" element={<RefundPolicy/>} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
         <Route path="/pay-deposit" element={<Pay_deposit />} />
       </Routes>
       <BottomBar />

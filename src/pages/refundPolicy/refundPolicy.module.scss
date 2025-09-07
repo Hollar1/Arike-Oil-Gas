@@ -1,0 +1,73 @@
+@import "../../../public/styles_props.scss";
+.parent_wrapper {
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+  }
+  .wrapper {
+    margin-top: 50px;
+    padding: 10px;
+    .sec_01 {
+      padding-top: 10px;
+      h3 {
+        @include header;
+        text-align: left;
+      }
+      p {
+        @include _text;
+        margin-top: 5px;
+      }
+    }
+    .sec_02 {
+      background-color: #f0f7ff;
+      padding: 25px 15px;
+      border-radius: 15px;
+      display: grid;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 25px;
+      h3 {
+        @include header;
+        text-align: left;
+      }
+      article {
+        display: flex;
+        gap: 10px;
+        div {
+          @include _text;
+          strong {
+            font-weight: map-get($font_weight, xl);
+            font-size: map-get($font_size, l);
+          }
+        }
+      }
+    }
+    .sec_03 {
+      padding: 15px;
+      border-radius: 15px;
+      display: grid;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 25px;
+      background-color: white;
+      box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+      h3 {
+        @include header;
+        text-align: left;
+      }
+      article {
+        display: flex;
+        gap: 10px;
+        div {
+          @include _text;
+          strong {
+            font-weight: map-get($font_weight, xl);
+            font-size: map-get($font_size, l);
+          }
+        }
+      }
+    }
+  } // Wrapper scope ends here
+} // Parent_wrapper scope ends here

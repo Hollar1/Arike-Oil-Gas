@@ -53,8 +53,20 @@ function Footer() {
 
         <h3>Legal</h3>
         <p>Terms & Conditions</p>
-        <p>Privacy Policy</p>
-        <p>Refund Policy</p>
+        <p
+          onClick={() => {
+            navigate("/privacy-policy");
+          }}
+        >
+          Privacy Policy
+        </p>
+        <p
+          onClick={() => {
+            navigate("/refund-policy");
+          }}
+        >
+          Refund Policy
+        </p>
 
         <h3>Newsletter</h3>
         <p>Subscribe for updates and special offers</p>
