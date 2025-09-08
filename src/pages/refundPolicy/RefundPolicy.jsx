@@ -5,6 +5,8 @@ import customer_care from "../../assets/icons/customer_care.png";
 import warning_care from "../../assets/icons/warning_icon1.png";
 import wrong_location from "../../assets/icons/wrong_location_icon.png";
 import stop_icon from "../../assets/icons/stop_icon.png";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 function RefundPolicy() {
   return (
@@ -86,6 +88,59 @@ function RefundPolicy() {
               the service has been completed.
             </div>
           </article>
+        </section>
+
+        <section className={styles.sec_04}>
+          <h3>Refund Request Process</h3>
+          <div>
+            1. <strong>Contact Us:</strong> Reach out to our customer support
+            team via phone or email within the specified timeframes.
+          </div>
+
+          <div>
+            2. <strong>Contact Us:</strong> Provide your order number, a
+            detailed description of the issue, and any supporting evidence
+            (e.g., photos).
+          </div>
+
+          <div>
+            3. <strong>Assessment:</strong> Our team will assess your request
+            and may require additional information.
+          </div>
+
+          <div>
+            4. <strong>Resolution:</strong>If approved, we will process the
+            refund to your original payment method.
+          </div>
+        </section>
+
+        <section className={styles.sec_05}>
+          <h3>Refund Processing Timeline</h3>
+          Refunds are typically processed within
+          <strong> 7-10 business days</strong>
+          from the date of approval. Please note that the exact timing may vary
+          depending on your payment provider. You will receive a notification
+          once your refund has been processed.
+        </section>
+
+        <section className={styles.sec_06}>
+          <h3>Contact Us</h3>
+          <div>
+            If you have any questions or need to request a refund, please
+            contact our customer support team:
+          </div>
+          <div>
+            <FontAwesomeIcon icon={faPhone} />{" "}
+            <a className={styles.href} href="tel:+2347067276727">
+              +2347067276727
+            </a>
+          </div>
+          <div>
+            <FontAwesomeIcon icon={faEnvelope} />{" "}
+            <a className={styles.href} href="mailto:admin@arikegas.com.ng">
+              admin@arikegas.com.ng
+            </a>
+          </div>
         </section>
       </div>
     </div>
