@@ -1,0 +1,42 @@
+@import "../../../public/styles_props.scss";
+
+.parent_wrapper {
+  .wrapper {
+    margin-top: 20px;
+    padding: 10px;
+    padding-bottom: 100px;
+    .sec_01 {
+      h3 {
+        @include header;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        p {
+          @include _text;
+          color: map-get($colors, color_07);
+          margin-bottom: 20px;
+        }
+      }
+      span {
+        @include _text;
+      }
+    }
+    .sec_02 {
+      margin-top: 25px;
+
+      h3 {
+        @include sub_header;
+        margin-top: 20px;
+      }
+      p {
+        @include _text;
+        margin-top: 5px;
+        .href {
+          color: map-get($colors, color_01);
+          margin-left: 8px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

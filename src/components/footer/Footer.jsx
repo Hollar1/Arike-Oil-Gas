@@ -52,7 +52,13 @@ function Footer() {
         </p>
 
         <h3>Legal</h3>
-        <p>Terms & Conditions</p>
+        <p
+          onClick={() => {
+            navigate("terms-conditions");
+          }}
+        >
+          Terms & Conditions
+        </p>
         <p
           onClick={() => {
             navigate("/privacy-policy");

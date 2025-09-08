@@ -55,8 +55,13 @@ function PrivacyPolicy() {
           <p>
             if you have any questions or concerns about this Privacy Policy or
             our data practices, please contact us at:{" "}
-            <a href="mailto:admin@arikegas.com.ng">admin@arikegas.com.ng</a> or
-            call us at <a href="tel:+2347067276727">+2347067276727</a>
+            <a className={styles.href} href="mailto:admin@arikegas.com.ng">
+              admin@arikegas.com.ng
+            </a>{" "}
+            or call us at{" "}
+            <a className={styles.href} href="tel:+2347067276727">
+              +2347067276727
+            </a>
           </p>
         </section>
       </div>

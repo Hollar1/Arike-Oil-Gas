@@ -16,11 +16,13 @@ import AboutUs from "./pages/aboutUs/AboutUs";
 import Career from "./pages/career/Career";
 import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy";
 import RefundPolicy from "./pages/refundPolicy/RefundPolicy";
+import HelpSupport from "./pages/helpSupport/HelpSupport";
+import TermsConditions from "./pages/termsConditions/TermsConditions";
 
 function App() {
   return (
     <Router>
-    <ScrollToTop/>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -31,11 +33,13 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/cylinder" element={<Cylinder />} />
         <Route path="/order" element={<Order />} />
-        <Route path="/about-us" element={<AboutUs/>} />
-        <Route path="/career" element={<Career/>} />
-        <Route path="/refund-policy" element={<RefundPolicy/>} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/pay-deposit" element={<Pay_deposit />} />
+        <Route path="/help-support" element={<HelpSupport />} />
+        <Route path="/terms-conditions" element={<TermsConditions/>} />
       </Routes>
       <BottomBar />
     </Router>

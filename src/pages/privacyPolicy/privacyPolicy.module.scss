@@ -34,6 +34,11 @@
       p {
         @include _text;
         margin-bottom: 25px;
+         .href {
+          color: map-get($colors, color_01);
+          margin-left: 8px;
+          text-decoration: none;
+        }
       }
     }
   }
